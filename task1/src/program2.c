@@ -56,7 +56,7 @@ int main(int argc, char **argv) {
     clock_t end = clock();
     double time_spent = (double)(end - start) / CLOCKS_PER_SEC;
     
-    printf("Tempo de execucao: %f segundos\n", time_spent);
+    printf("%f", time_spent);
     
     // Liberando a memória alocada
     for(int i = 0; i < n; i++) {

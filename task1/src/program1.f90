@@ -27,7 +27,7 @@ PROGRAM MATRIX_MULTIPLICATION
     CALL CPU_TIME(start_time)
   
     ! Realiza a multiplicação da matriz pelo vetor
-    IF (invert == 1) THEN
+    IF (invert == 0) THEN
         DO i = 1, n
             DO j = 1, n
             c(i) = c(i) + A(i,j) * b(j)
@@ -44,7 +44,7 @@ PROGRAM MATRIX_MULTIPLICATION
     CALL CPU_TIME(end_time)
     time_elapsed = end_time - start_time
 
-    WRITE(*,*) 'Tempo de execução:', time_elapsed, 'segundos'
+    WRITE(*,*) time_elapsed
   
 
     DEALLOCATE(A)

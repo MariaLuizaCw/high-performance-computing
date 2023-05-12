@@ -23,7 +23,7 @@ void matriz_por_vetor_por_coluna(float **matriz, float *vetor, float *resultado,
 
 int main(int argc, char **argv) {
     int n =  atoi(argv[1]);
-    int inverter = atoi(argv[1]);
+    int inverter = atoi(argv[2]);
     // Alocando a matriz
     float **matriz = malloc(n * sizeof(float *));
     for(int i = 0; i < n; i++) {
@@ -50,7 +50,6 @@ int main(int argc, char **argv) {
     if (inverter == 1){
         matriz_por_vetor_por_coluna(matriz, vetor, resultado, n);
     } else {
-
         matriz_por_vetor_por_linha(matriz, vetor, resultado, n);
     }
     clock_t end = clock();
